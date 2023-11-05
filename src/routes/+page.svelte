@@ -103,10 +103,10 @@
                         if (!debts[to][payer]) debts[to][payer] = 0;
 
                         debts[payer][to] += amount;
-                        console.log("From payer to debtor: " + debts[payer][to])
+                        console.log(`From ${to} to ${payer}: ` + debts[payer][to])
 
                         debts[to][payer] -= amount;
-                        console.log("From debtor to payer: " + debts[to][payer])
+                        console.log(`From ${payer} to ${to}: ` + debts[to][payer])
                         console.log("\n")
                     }
                 });
@@ -118,7 +118,7 @@
                 for (const debtor in debts[payer]) {
                     const amount = debts[payer][debtor];
                     if (amount > 0) {
-                        whoOwesToWho.push({ from: debtor, to: payer, amount: amount });
+                        whoOwesToWho.push({ from: debtor, to: payer, amount: amount.toFixed(2) });
                     }
                 }
             }
