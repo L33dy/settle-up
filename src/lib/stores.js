@@ -1,3 +1,6 @@
 import {writable} from "svelte/store";
 
-export let users = writable("")
+export const users = writable([])
+export const payments = writable([])
+
+export const whoToWho = writable([])
