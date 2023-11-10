@@ -144,8 +144,6 @@
     }
 </style>
 
-<!-- rozdělit dluhy, odečíst -->
-
 <main class="container"
       style="padding-top: 5rem; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 1rem;">
     <div class="buttons">
@@ -184,9 +182,6 @@
             <label for="whom">Komu?</label>
             <select id="whom">
                 <option value="Všem" selected>Všem</option>
-                {#each $users as user}
-                    <option value={user.name}>{user.name}</option>
-                {/each}
             </select>
             <input type="number" id="how-much" placeholder="Kolik?">
             <button type="button" on:click={addPayment}>Přidat platbu</button>
